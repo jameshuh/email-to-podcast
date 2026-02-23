@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+*.egg-info/
+
+# 敏感配置文件
+config/email_config.json
+config/baidu_api.json
+config/gmail_credentials.json
+*.pickle
+
+# 输出文件
+*.mp3
+output/
+podcasts/
+
+# IDE
+.vscode/
+.idea/
+
+# macOS
+.DS_Store
