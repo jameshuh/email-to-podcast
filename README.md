@@ -94,6 +94,40 @@ python service.py
 
 ## 🔧 高级用法
 
+### RSS Feed 生成（支持播客订阅）
+
+```python
+from rss_generator import RSSGenerator
+
+# 创建 RSS 生成器
+rss = RSSGenerator(
+    title="每日邮件摘要播客",
+    description="将您的邮件自动转换为播客",
+    author="您的名字",
+    email="your@email.com",
+    base_url="https://your-domain.com/podcasts"
+)
+
+# 添加播客集数
+rss.add_episode(
+    audio_file='./podcasts/podcast_20260224.mp3',
+    title="2026年2月24日邮件摘要",
+    description="今日邮件摘要...",
+    duration=180
+)
+
+# 生成 RSS feed
+rss.generate_rss('podcast.xml')
+```
+
+**支持的播客平台**：
+- Apple Podcasts
+- Spotify
+- Google Podcasts
+- 小宇宙
+- 喜马拉雅
+- 其他支持 RSS 的播客播放器
+
 ### 定时执行
 
 ```python
